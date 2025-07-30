@@ -1,0 +1,16 @@
+DATABASE F:\Projectes\3878_2BMA_RTM\Tecnico\Tesina\Simplified_chemistry\CEMDATA18-31-03-2022-phaseVol.dat
+SOLUTION 1 Fresh water -  Re-equilibrated with CEMDATA v18
+temp	25
+pH	7.133
+pe	10.8
+redox	pe
+units	mol/kgw
+density	1
+	C                 4.663e-03
+	Ca                2.032e-03
+	Si                1.997e-04
+-water	1 # kg
+
+## this water is equilibrated with calcite
+
+END

@@ -1,0 +1,64 @@
+DATABASE F:\Projectes\3878_2BMA_RTM\Tecnico\Tesina\Simplified_chemistry\CEMDATA18-31-03-2022-phaseVol.dat
+SOLUTION 1  #CONCRETE - OPC + limestone concrete
+    temp      25
+    pH        12.476
+    pe         -7.159
+    redox     pe
+    units     mol/kgw
+    density   1
+	C                 6.537e-06
+	Ca                1.934e-02
+	Si                3.947e-05
+    -water    0.11 # kg
+	
+EQUILIBRIUM_PHASES 1 # units == mol/l_med
+Portlandite         0    0.8900 dissolve_only
+Cal  	              0    1.1854 
+Jennite             0    0.8173
+Tob-II              0    0
+Amor-Sl             0    0
+
+#Other primary phases
+#Hydrotalcite        0    0.0453
+#Ettringite          0    0.0175
+#monocarbonate       0    0.0946
+
+## Secundary phases
+#Brc                 0    0
+#CAH10               0    0
+#Gp                  0    0
+#tricarboalu03       0    0
+#C4AH13              0    0
+#C2AH65              0    0
+#straetlingite       0    0
+#syngenite           0    0
+#thaumasite          0    0
+#Ord-Dol             0    0
+#C3AH6               0    0
+#M15SH               0    0
+#M075SH              0    0
+
+#EXCHANGE 1
+#	Ex2Ca             3.119E-02
+#	Ex2K2             7.962E-03
+#	Ex2Na2            1.463E-03
+	
+END
+
+#SOLUTION 1  #CONCRETE - OPC + limestone concrete
+#    temp      25
+#    pH        13.27464649269
+#    pe        7.182
+#    redox     pe
+#    units     mol/kgw
+#    density   1
+#    Al	  5.3775025415E-05
+#    C	        7.5856013375E-05
+#    Ca	  1.4168634071E-03
+#    Cl	  1.8137059001E-14
+#    K 	  2.0141856994E-01
+#    Mg	  1.9526045407E-09
+#    Na	  3.4230753378E-02
+#    S 	  1.5193568327E-03
+#    Si	  6.6854909509E-05
+#    -water    0.11 # kg

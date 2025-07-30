@@ -1,0 +1,79 @@
+Oseberg_water:
+  general:
+    porosity:
+      range: [ 0.1, 0.1 ]
+      log: False
+    saturation:
+      range: [ 1, 1 ]
+      log: False
+    Temperature:
+      range: [100, 100]
+      log: False
+    Pressure:
+      range: [276.34, 276.34]
+      log: False
+  species:
+    #C:
+    #  range: [ 7.0e-6, 4.7e-3 ]
+    #  log: False
+    Ca:
+      range: [ 5.03e-3, 1.9e-2 ]
+      log: False
+    Si:
+      range: [ 3.9e-5, 4.2e-3 ]
+      log: False
+    H:
+      range: [ 2.0e-7, 3.9e-2 ]
+      log: False
+    O:
+      range: [ 1.0e-7, 3.9e-2 ]
+      log: FalseS
+  minerals:
+    #Cal:
+    #  range: [0.0, 2.52]
+    #  log: False
+    #  composition: {'Ca':1, 'C':1, 'O':3}
+    #  zero_proportion: 0.1
+#      kinetic: True
+    Portlandite:
+      range: [0.0, 0.89]
+      log: False
+      composition: {'Ca':1, 'H':2, 'O':2}
+      zero_proportion: 0.5
+#      kinetic: True
+    Jennite:
+      range: [0.0, 0.83]
+      log: False
+      composition: {'Si':1, 'Ca':1.6667, 'O':5.7667, 'H':4.2}
+      zero_proportion: 0.4
+#      kinetic: True
+#  kinetic_solver:
+#    units: "seconds"
+#    range: [31536, 3153600]
+#    kinetic_batch_size: 2500
+#    kinetic_num_config:
+#      runge_kutta: 5
+#      bad_step_max: 500
+#      cvode: True
+#      cvode_steps: 500
+#      cvode_order: 3
+  punches:
+    t_O_corrected: PUNCH TOT('O')-1000/GFW('H2O')
+    t_H_corrected: PUNCH TOT('H')-2000/GFW('H2O')
+    density: PUNCH RHO
+    sol_vol: PUNCH SOLN_VOL
+    water_mass_fraction: PUNCH TOT('water')/(RHO*SOLN_VOL)
+
+dataset_generation:
+  number_of_samples: 100000
+  n_phreeqcrm_threads: 10
+  engines:
+    random_dataset_engine:
+      water: Oseberg_water
+      type: RandomDatasetEngine
+      options:
+        proportion: 1.0
+
+path:
+  logs: "./logs"
+
